@@ -1,0 +1,57 @@
+package com.actions;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class WebActions {
+
+
+	WaitsFunctions wait=null;
+
+	public void elementclickable(WebDriver driver,WebElement ele){
+		wait.waitforvisibiltyofelement(driver, ele);
+		ele.click();
+	}
+	
+public void entertext(WebDriver driver,WebElement ele,String text){
+		
+	wait.waitforvisibiltyofelement(driver, ele);
+		ele.sendKeys(text);
+	}
+
+public void javascriptclick(WebDriver driver,WebElement ele){
+	
+	wait.waitforvisibiltyofelement(driver, ele);
+	JavascriptExecutor executor = (JavascriptExecutor)driver;
+	executor.executeScript("arguments[0].click();", ele);
+
+}
+
+
+public boolean ischecked(WebDriver driver,WebElement ele){
+	wait.waitforvisibiltyofelement(driver, ele);
+	boolean flag=ele.isSelected();
+	return flag;
+	
+}
+
+public boolean iselementpresent(WebDriver driver,WebElement ele){
+	boolean flag=false;
+	try{
+		ele.isDisplayed();
+		flag=true;
+	}
+	catch(Exception e){
+	}
+	return flag;
+}
+
+
+
+
+	
+	
+}

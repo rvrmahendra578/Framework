@@ -1,0 +1,13 @@
+package com.tests;
+
+import org.openqa.selenium.WebDriver;
+
+public class Check {
+WebDriver driver;
+
+@org.testng.annotations.Test
+public void Test(){
+	
+}
+	
+}

@@ -1,0 +1,13 @@
+package com.Base;
+
+import org.openqa.selenium.WebDriver;
+
+public class Browserdriver {
+
+	public WebDriver webbrowser(){
+		
+		return null;
+		
+	}
+
+}

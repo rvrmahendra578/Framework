@@ -1,0 +1,45 @@
+package com.tests;
+
+import java.util.HashMap;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.Base.BaseTest;
+import com.data.PropertiesData;
+import com.listensers.TestListeners;
+
+public class Check extends BaseTest {
+WebDriver driver;
+PropertiesData data=null;
+HashMap details=new HashMap();
+TestListeners listener=null;
+
+
+@BeforeMethod
+public void methodinitized(){
+	Listenerstep();
+	data=new PropertiesData();
+	
+	try {
+		 details=data.browserdetails();
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+			
+	getDriver().get((String) details.get("url"));
+}
+@Test
+public void Test(){
+	System.out.println("test");
+}
+	
+@Test
+public void Test1(){
+
+	getDriver().findElement(By.id("Searchq")).click();
+}
+}

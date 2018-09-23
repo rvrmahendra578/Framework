@@ -1,0 +1,13 @@
+package com.Base;
+
+import org.openqa.selenium.WebDriver;
+
+public class InitDriver implements Browser {
+
+	public WebDriver init() {
+		return null;
+		
+		
+	}
+
+}

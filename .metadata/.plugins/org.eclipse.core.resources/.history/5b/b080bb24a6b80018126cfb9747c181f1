@@ -1,0 +1,29 @@
+package com.data;
+
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Properties;
+
+public class PropertiesData {
+	
+	HashMap hm=new HashMap<String,String>();
+	 File file = new File("/Framework/webproperties.properties");
+	 FileInputStream fileInput = null;
+	public HashMap browserdetails() throws Exception{
+		fileInput = new FileInputStream(file);
+		Properties prop = new Properties();
+		prop.load(fileInput);
+		
+		hm.put("url",prop.getProperty("browserurl"));
+		hm.put("driverpath",prop.getProperty("driverpath"));
+		hm.put("browsername",prop.getProperty("browsername"));
+		hm.put("browsername",prop.getProperty("browsername"));
+		return hm;
+		
+	}
+}

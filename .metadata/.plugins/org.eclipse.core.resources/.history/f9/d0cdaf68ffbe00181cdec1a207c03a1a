@@ -1,0 +1,14 @@
+package com.pages;
+
+import org.openqa.selenium.WebDriver;
+
+import com.actions.WebActions;
+
+public class Checkpages extends WebActions{
+
+	WebDriver driver;
+	public Checkpages(WebDriver driver){
+		super(driver);
+		this.driver=driver;
+	}
+}

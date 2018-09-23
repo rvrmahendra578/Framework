@@ -1,0 +1,17 @@
+package com.tests;
+
+import org.openqa.selenium.WebDriver;
+
+import com.Base.BaseTest;
+import com.data.PropertiesData;
+
+public class Check extends BaseTest {
+WebDriver driver;
+PropertiesData data=null;
+
+@org.testng.annotations.Test
+public void Test(){
+	driver.get(arg0);
+}
+	
+}

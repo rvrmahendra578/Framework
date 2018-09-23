@@ -1,0 +1,12 @@
+package com.data;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class PropertiesData {
+	
+	
+	Properties pro = new Properties();
+	FileInputStream file=new FileInputStream("");
+
+}

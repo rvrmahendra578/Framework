@@ -1,0 +1,23 @@
+package com.Base;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeSuite;
+
+import com.listensers.TestListeners;
+
+public class BaseTest extends TestListeners {
+InitDriver browser=null;
+WebDriver driver;
+@BeforeSuite
+public void initconfig(){
+	
+	driver = new InitDriver().init();
+	test.l
+}
+
+public WebDriver getDriver(){
+	return new InitDriver().init();
+}
+
+
+}

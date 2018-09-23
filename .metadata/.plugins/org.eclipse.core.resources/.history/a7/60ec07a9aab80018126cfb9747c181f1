@@ -1,0 +1,15 @@
+package com.tests;
+
+import org.openqa.selenium.WebDriver;
+
+import com.Base.BaseTest;
+
+public class Check extends BaseTest {
+WebDriver driver;
+
+@org.testng.annotations.Test
+public void Test(){
+	
+}
+	
+}

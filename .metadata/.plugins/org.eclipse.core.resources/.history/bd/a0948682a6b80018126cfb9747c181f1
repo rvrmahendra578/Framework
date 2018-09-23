@@ -1,0 +1,30 @@
+package com.Base;
+
+import java.util.HashMap;
+
+import org.openqa.selenium.WebDriver;
+
+import com.data.PropertiesData;
+
+public class InitDriver implements Browser {
+	Browserdriver web=null;
+	Mobiledriver mobile=null;
+	PropertiesData data=null;
+
+	public WebDriver init() {
+		data=new PropertiesData();
+		
+		try {
+			HashMap details=data.browserdetails();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return null;
+		
+		
+	}
+
+}

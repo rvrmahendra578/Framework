@@ -1,0 +1,12 @@
+package com.Base;
+
+import org.testng.annotations.BeforeSuite;
+
+public class BaseTest {
+Browser browser=null;
+
+@BeforeSuite
+public void initconfig(){
+	
+}
+}

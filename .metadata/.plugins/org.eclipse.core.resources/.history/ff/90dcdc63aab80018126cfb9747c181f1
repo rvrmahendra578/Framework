@@ -1,0 +1,13 @@
+package com.tests;
+
+import org.openqa.selenium.WebDriver;
+
+public class Check {
+WebDriver driver;
+
+@Test
+public void Test(){
+	
+}
+	
+}

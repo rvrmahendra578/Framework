@@ -1,0 +1,27 @@
+package com.listensers;
+
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
+
+
+public class TestListeners implements ISuiteListener {
+
+	static ExtentTest test;
+	static ExtentReports report;
+	public void onFinish(ISuite arg0) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	public void onStart(ISuite arg0) {
+		// TODO Auto-generated method stub
+		report = new ExtentReports();
+		
+	}
+
+}

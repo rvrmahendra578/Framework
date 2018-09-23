@@ -1,0 +1,23 @@
+package com.data;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.util.Properties;
+
+public class PropertiesData {
+	FileInputStream fileinput;
+	File file = new File("/Framework/webproperties.properties");
+	
+	Properties pro = new Properties();
+	
+	try{
+ fileinput=new FileInputStream(file);
+	}
+	catch(Exception e){
+		e.printStackTrace();
+	}
+
+}
+}

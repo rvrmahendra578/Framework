@@ -1,0 +1,10 @@
+package com.Base;
+
+public class InitDriver implements Browser {
+
+	public void init() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

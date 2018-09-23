@@ -1,0 +1,41 @@
+package com.data;
+
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+public class PropertiesData {
+	{
+	FileInputStream fileinput =null;
+	File file = new File("/Framework/webproperties.properties");
+	
+	
+	try {
+		fileinput = new FileInputStream(file);
+	} catch (FileNotFoundException e1) {
+		e1.printStackTrace();
+	}
+	Properties prop = new Properties();
+	
+	//load properties file
+	try {
+		prop.load(fileinput);
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+	
+	public String getUrl(){
+		return System.getProperty("browserurl");
+	}
+	}
+
+	private String getUrl() {
+		// TODO Auto-generated method stub
+		String url=System.getProperty("browserurl");
+		return url;
+	}
+}

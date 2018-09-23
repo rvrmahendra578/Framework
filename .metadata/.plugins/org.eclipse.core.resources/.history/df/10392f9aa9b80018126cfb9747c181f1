@@ -1,0 +1,31 @@
+package com.Base;
+
+import java.util.HashMap;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class Browserdriver {
+	WebDriver driver;
+
+	public WebDriver webbrowser(HashMap details){
+		
+		if(details.get("browsername").equals("chrome")){
+			System.setProperty("webdriver.chrome.driver",(String) details.get("driverpath"));
+			driver=new ChromeDriver();
+		}
+		else if(details.get("browsername").equals("ie")){
+			System.setProperty("webdriver.ie.driver",(String) details.get("driverpath"));
+			driver=new InternetExplorerDriver();
+		}
+		else{
+			System.setProperty("webdriver.gecko.driver",(String) details.get("driverpath"));
+			driver=new FirefoxDriver();
+		}
+			
+		return null;
+		
+	}
+
+}

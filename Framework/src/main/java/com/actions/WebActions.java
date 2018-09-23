@@ -1,0 +1,77 @@
+package com.actions;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.listensers.TestListeners;
+
+public class WebActions extends WaitsFunctions {
+
+	WebDriver driver;
+	TestListeners listener=null;
+public WebActions(WebDriver driver){
+	super(driver);
+	this.driver=driver;
+	listener=new TestListeners();
+}
+	
+	public void elementclickable(WebElement ele){
+		listener.stepifo("Click on", ele);
+		waitforvisibiltyofelement(ele);
+		
+		ele.click();
+	}
+	
+public void entertext(WebElement ele,String text){
+		
+	waitforvisibiltyofelement( ele);
+		ele.sendKeys(text);
+	}
+
+public void javascriptclick(WebElement ele){
+	
+	waitforvisibiltyofelement( ele);
+	JavascriptExecutor executor = (JavascriptExecutor)driver;
+	executor.executeScript("arguments[0].click();", ele);
+
+}
+
+
+public boolean ischecked(WebElement ele){
+	waitforvisibiltyofelement( ele);
+	boolean flag=ele.isSelected();
+	return flag;
+	
+}
+
+public boolean iselementpresent(WebElement ele){
+	boolean flag=false;
+	try{
+		ele.isDisplayed();
+		flag=true;
+	}
+	catch(Exception e){
+	}
+	return flag;
+}
+
+
+public void movetoelement(WebElement ele){
+	waitforvisibiltyofelement( ele);
+	new Actions(driver).moveToElement(ele).build().perform();
+}
+
+public void doubleclickonelement(WebElement ele){
+	waitforvisibiltyofelement(ele);
+	new Actions(driver).doubleClick().build().perform();
+}	
+	
+public void rightclickonelement(WebElement ele){
+	waitforvisibiltyofelement(ele);
+	new Actions(driver).contextClick(ele).build().perform();
+}
+}

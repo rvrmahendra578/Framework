@@ -1,0 +1,11 @@
+package com.pages;
+
+import org.openqa.selenium.WebDriver;
+
+public class Checkpages {
+
+	WebDriver driver;
+	public Checkpages(WebDriver driver){
+		
+	}
+}

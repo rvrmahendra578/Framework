@@ -1,0 +1,15 @@
+package com.Base;
+
+import java.util.HashMap;
+
+import org.openqa.selenium.WebDriver;
+
+public class Browserdriver {
+
+	public WebDriver webbrowser(HashMap details){
+		
+		return null;
+		
+	}
+
+}

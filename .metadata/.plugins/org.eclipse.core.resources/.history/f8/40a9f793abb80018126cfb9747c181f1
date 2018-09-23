@@ -1,0 +1,30 @@
+package com.tests;
+
+import java.util.HashMap;
+
+import org.openqa.selenium.WebDriver;
+
+import com.Base.BaseTest;
+import com.data.PropertiesData;
+
+public class Check extends BaseTest {
+WebDriver driver;
+PropertiesData data=null;
+HashMap details=new HashMap();
+
+@org.testng.annotations.Test
+public void Test(){
+	data=new PropertiesData();
+	
+	try {
+		 details=data.browserdetails();
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	String url=(String) details.get("browserurl")
+			System.out.println("...."+url);
+	driver.get(url);
+}
+	
+}

@@ -1,0 +1,13 @@
+package com.data;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class PropertiesData {
+	
+	
+	Properties pro = new Properties();
+	BufferedReader reader= new BufferedReader(new FileReader("/Framework/webproperties.properties"));
+
+}
